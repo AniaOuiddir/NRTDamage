@@ -51,6 +51,9 @@ nrtdamage list
 | tungsten   | W      | 90.0                     |
 | aluminum   | Al     | 25.0                     |
 | copper     | Cu     | 30.0                     |
+| nickel     | Ni     | 40.0                     |
+| molybdenum | Mo     | 60.0                     |
+| vanadium   | V      | 40.0                     |
 
 ## Use as a Python library
 
