@@ -18,6 +18,7 @@ worldwide to quantify radiation damage.
 ## Example output
 
 ![DPA vs time for iron](images/dpa_vs_time_iron.png)
+![DPA comparison across materials](images/dpa_comparison.png)
 
 ## Installation
 
