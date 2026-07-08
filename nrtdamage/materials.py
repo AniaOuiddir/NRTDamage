@@ -36,6 +36,24 @@ MATERIALS = {
         "cross_section": 3.78e-24,
         "description": "Copper - used in electrical components",
     },
+    "nickel": {
+        "symbol": "Ni",
+        "displacement_energy": 40.0,
+        "cross_section": 4.49e-24,
+        "description": "Nickel - used in superalloys for nuclear applications",
+    },
+    "molybdenum": {
+        "symbol": "Mo",
+        "displacement_energy": 60.0,
+        "cross_section": 2.65e-24,
+        "description": "Molybdenum - used in fusion reactor first wall",
+    },
+    "vanadium": {
+        "symbol": "V",
+        "displacement_energy": 40.0,
+        "cross_section": 5.06e-24,
+        "description": "Vanadium - candidate material for fusion reactors",
+    },
 }
 
 
