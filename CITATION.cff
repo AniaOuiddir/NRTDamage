@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "NRTDamage"
+abstract: "A Python library and command-line tool to estimate radiation-induced
+  atomic displacement damage in nuclear materials using the NRT model."
+authors:
+  - family-names: Ouiddir
+    given-names: Ania
+    affiliation: "University of Bologna, Italy"
+    email: ania.ania@studio.unibo.it
+version: 0.1.0
+date-released: 2026-07-07
+license: MIT
+repository-code: "https://github.com/AniaOuiddir/NRTDamage"
+keywords:
+  - nuclear physics
+  - radiation damage
+  - materials science
+  - displacements per atom
+  - NRT model
+  - Python
+references:
+  - type: article
+    authors:
+      - family-names: Norgett
+        given-names: M.J.
+      - family-names: Robinson
+        given-names: M.T.
+      - family-names: Torrens
+        given-names: I.M.
+    title: "A proposed method of calculating displacement dose rates"
+    journal: "Nuclear Engineering and Design"
+    volume: 33
+    issue: 1
+    pages: "50-54"
+    year: 1975
