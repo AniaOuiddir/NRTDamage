@@ -1,6 +1,4 @@
 # NRTDamage
-A Python tool to estimate radiation damage in materials using the NRT model (displacements per atom)
-# NRTDamage
 
 A Python library and command-line tool to estimate radiation-induced
 atomic displacement damage in nuclear materials using the
@@ -16,6 +14,10 @@ the lifetime of materials in nuclear reactors and space applications.
 NRTDamage implements the standard NRT model to estimate the number of
 **displacements per atom (DPA)** — the key metric used by nuclear engineers
 worldwide to quantify radiation damage.
+
+## Example output
+
+![DPA vs time for iron](images/dpa_vs_time_iron.png)
 
 ## Installation
 
