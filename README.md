@@ -1,4 +1,5 @@
 # NRTDamage
+![Tests](https://github.com/AniaOuiddir/NRTDamage/actions/workflows/tests.yml/badge.svg)
 
 A Python library and command-line tool to estimate radiation-induced
 atomic displacement damage in nuclear materials using the
