@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>nrtdamage package &#8212; NRTDamage 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=01f34227"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="nrtdamage-package">
+<h1>nrtdamage package<a class="headerlink" href="#nrtdamage-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-nrtdamage.cli">
+<span id="nrtdamage-cli-module"></span><h2>nrtdamage.cli module<a class="headerlink" href="#module-nrtdamage.cli" title="Link to this heading">¶</a></h2>
+<p>cli.py - Command line interface for NRTDamage.</p>
+<p>This module provides the command line interface to estimate
+radiation damage in materials using the NRT model.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.cli.create_parser">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.cli.</span></span><span class="sig-name descname"><span class="pre">create_parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/cli.html#create_parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.cli.create_parser" title="Link to this definition">¶</a></dt>
+<dd><p>Create and return the argument parser for NRTDamage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The configured argument parser.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>argparse.ArgumentParser</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.cli.main">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.cli.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/cli.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.cli.main" title="Link to this definition">¶</a></dt>
+<dd><p>Main entry point for the NRTDamage CLI.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.cli.run_compute">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.cli.</span></span><span class="sig-name descname"><span class="pre">run_compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/cli.html#run_compute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.cli.run_compute" title="Link to this definition">¶</a></dt>
+<dd><p>Execute the compute command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>argparse.Namespace</em>) – Parsed command line arguments.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.cli.run_list">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.cli.</span></span><span class="sig-name descname"><span class="pre">run_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/cli.html#run_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.cli.run_list" title="Link to this definition">¶</a></dt>
+<dd><p>Execute the list command.</p>
+</dd></dl>
+
+</section>
+<section id="module-nrtdamage.materials">
+<span id="nrtdamage-materials-module"></span><h2>nrtdamage.materials module<a class="headerlink" href="#module-nrtdamage.materials" title="Link to this heading">¶</a></h2>
+<p>materials.py - Database of materials for NRT damage calculations.</p>
+<p>This module provides displacement energies and neutron cross-sections
+for common nuclear and aerospace materials.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.materials.get_material">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.materials.</span></span><span class="sig-name descname"><span class="pre">get_material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/materials.html#get_material"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.materials.get_material" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve material properties by name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the material (case-insensitive).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary containing material properties.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the material is not found in the database.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mat</span> <span class="o">=</span> <span class="n">get_material</span><span class="p">(</span><span class="s2">&quot;iron&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mat</span><span class="p">[</span><span class="s2">&quot;displacement_energy&quot;</span><span class="p">]</span>
+<span class="go">40.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.materials.list_materials">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.materials.</span></span><span class="sig-name descname"><span class="pre">list_materials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/materials.html#list_materials"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.materials.list_materials" title="Link to this definition">¶</a></dt>
+<dd><p>Return a list of all available material names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sorted list of available material names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">materials</span> <span class="o">=</span> <span class="n">list_materials</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;iron&quot;</span> <span class="ow">in</span> <span class="n">materials</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-nrtdamage.physics">
+<span id="nrtdamage-physics-module"></span><h2>nrtdamage.physics module<a class="headerlink" href="#module-nrtdamage.physics" title="Link to this heading">¶</a></h2>
+<p>physics.py - Core NRT damage model calculations.</p>
+<p>This module implements the Norgett-Robinson-Torrens (NRT) model
+for estimating atomic displacement damage in irradiated materials.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.physics.compute_dpa">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.physics.</span></span><span class="sig-name descname"><span class="pre">compute_dpa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cross_section</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damage_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displacement_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/physics.html#compute_dpa"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.physics.compute_dpa" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the total DPA (displacements per atom).</p>
+<p>Computes the accumulated radiation damage in a material
+exposed to a neutron flux over a given time period.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flux</strong> (<em>float</em>) – Neutron flux in n/cm²/s. Must be positive.</p></li>
+<li><p><strong>cross_section</strong> (<em>float</em>) – Neutron cross-section of the material in cm². Must be positive.</p></li>
+<li><p><strong>damage_energy</strong> (<em>float</em>) – Average damage energy per collision in eV. Must be positive.</p></li>
+<li><p><strong>displacement_energy</strong> (<em>float</em>) – Threshold displacement energy of the material in eV.
+Must be positive.</p></li>
+<li><p><strong>time</strong> (<em>float</em>) – Irradiation time in seconds. Must be positive.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The total DPA value (dimensionless).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If any parameter is not positive.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">compute_dpa</span><span class="p">(</span><span class="mf">1e14</span><span class="p">,</span> <span class="mf">1e-24</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">,</span> <span class="mf">3.15e7</span><span class="p">)</span>
+<span class="go">0.0025199999999999997</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.physics.nrt_displacements">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.physics.</span></span><span class="sig-name descname"><span class="pre">nrt_displacements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">damage_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displacement_energy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/physics.html#nrt_displacements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.physics.nrt_displacements" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the number of displaced atoms using the NRT model.</p>
+<p>The NRT model estimates the number of Frenkel pairs (vacancies and
+interstitials) produced when a Primary Knock-on Atom (PKA) receives
+a given damage energy. This is the standard model used in nuclear
+materials science.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>damage_energy</strong> (<em>float</em>) – The damage energy deposited in the material, in eV.
+Must be positive.</p></li>
+<li><p><strong>displacement_energy</strong> (<em>float</em>) – The threshold displacement energy of the material, in eV.
+Must be positive.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The estimated number of displaced atoms (dimensionless).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If damage_energy or displacement_energy are not positive.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nrt_displacements</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">)</span>
+<span class="go">10.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-nrtdamage.plots">
+<span id="nrtdamage-plots-module"></span><h2>nrtdamage.plots module<a class="headerlink" href="#module-nrtdamage.plots" title="Link to this heading">¶</a></h2>
+<p>plots.py - Visualization functions for NRT damage results.</p>
+<p>This module provides plotting functions to visualize radiation
+damage as a function of various parameters.</p>
+<p>Note: visualization functions are not tested as per project guidelines.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.plots.plot_dpa_comparison">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.plots.</span></span><span class="sig-name descname"><span class="pre">plot_dpa_comparison</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damage_energy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_years</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/plots.html#plot_dpa_comparison"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.plots.plot_dpa_comparison" title="Link to this definition">¶</a></dt>
+<dd><p>Plot DPA comparison across all available materials.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flux</strong> (<em>float</em>) – Neutron flux in n/cm2/s.</p></li>
+<li><p><strong>damage_energy</strong> (<em>float</em><em>, </em><em>optional</em>) – Average damage energy per collision in eV. Default is 1000.0.</p></li>
+<li><p><strong>time_years</strong> (<em>float</em><em>, </em><em>optional</em>) – Irradiation time in years. Default is 1.0.</p></li>
+<li><p><strong>save_path</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – If provided, saves the plot to this path. Default is None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.plots.plot_dpa_vs_time">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.plots.</span></span><span class="sig-name descname"><span class="pre">plot_dpa_vs_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">material_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damage_energy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_time_years</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/plots.html#plot_dpa_vs_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.plots.plot_dpa_vs_time" title="Link to this definition">¶</a></dt>
+<dd><p>Plot DPA accumulation over time for a given material.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>material_name</strong> (<em>str</em>) – Name of the material to plot.</p></li>
+<li><p><strong>flux</strong> (<em>float</em>) – Neutron flux in n/cm2/s.</p></li>
+<li><p><strong>damage_energy</strong> (<em>float</em><em>, </em><em>optional</em>) – Average damage energy per collision in eV. Default is 1000.0.</p></li>
+<li><p><strong>max_time_years</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum irradiation time in years. Default is 10.</p></li>
+<li><p><strong>save_path</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – If provided, saves the plot to this path. Default is None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-nrtdamage">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-nrtdamage" title="Link to this heading">¶</a></h2>
+<p>nrtdamage - A Python tool to estimate radiation damage in materials
+using the NRT (Norgett-Robinson-Torrens) model.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.compute_dpa">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.</span></span><span class="sig-name descname"><span class="pre">compute_dpa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cross_section</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damage_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displacement_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/physics.html#compute_dpa"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.compute_dpa" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the total DPA (displacements per atom).</p>
+<p>Computes the accumulated radiation damage in a material
+exposed to a neutron flux over a given time period.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flux</strong> (<em>float</em>) – Neutron flux in n/cm²/s. Must be positive.</p></li>
+<li><p><strong>cross_section</strong> (<em>float</em>) – Neutron cross-section of the material in cm². Must be positive.</p></li>
+<li><p><strong>damage_energy</strong> (<em>float</em>) – Average damage energy per collision in eV. Must be positive.</p></li>
+<li><p><strong>displacement_energy</strong> (<em>float</em>) – Threshold displacement energy of the material in eV.
+Must be positive.</p></li>
+<li><p><strong>time</strong> (<em>float</em>) – Irradiation time in seconds. Must be positive.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The total DPA value (dimensionless).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If any parameter is not positive.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">compute_dpa</span><span class="p">(</span><span class="mf">1e14</span><span class="p">,</span> <span class="mf">1e-24</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">,</span> <span class="mf">3.15e7</span><span class="p">)</span>
+<span class="go">0.0025199999999999997</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.get_material">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.</span></span><span class="sig-name descname"><span class="pre">get_material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/materials.html#get_material"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.get_material" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieve material properties by name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the material (case-insensitive).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary containing material properties.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the material is not found in the database.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mat</span> <span class="o">=</span> <span class="n">get_material</span><span class="p">(</span><span class="s2">&quot;iron&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mat</span><span class="p">[</span><span class="s2">&quot;displacement_energy&quot;</span><span class="p">]</span>
+<span class="go">40.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.list_materials">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.</span></span><span class="sig-name descname"><span class="pre">list_materials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/materials.html#list_materials"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.list_materials" title="Link to this definition">¶</a></dt>
+<dd><p>Return a list of all available material names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sorted list of available material names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">materials</span> <span class="o">=</span> <span class="n">list_materials</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;iron&quot;</span> <span class="ow">in</span> <span class="n">materials</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nrtdamage.nrt_displacements">
+<span class="sig-prename descclassname"><span class="pre">nrtdamage.</span></span><span class="sig-name descname"><span class="pre">nrt_displacements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">damage_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displacement_energy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nrtdamage/physics.html#nrt_displacements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nrtdamage.nrt_displacements" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the number of displaced atoms using the NRT model.</p>
+<p>The NRT model estimates the number of Frenkel pairs (vacancies and
+interstitials) produced when a Primary Knock-on Atom (PKA) receives
+a given damage energy. This is the standard model used in nuclear
+materials science.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>damage_energy</strong> (<em>float</em>) – The damage energy deposited in the material, in eV.
+Must be positive.</p></li>
+<li><p><strong>displacement_energy</strong> (<em>float</em>) – The threshold displacement energy of the material, in eV.
+Must be positive.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The estimated number of displaced atoms (dimensionless).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If damage_energy or displacement_energy are not positive.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nrt_displacements</span><span class="p">(</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">40.0</span><span class="p">)</span>
+<span class="go">10.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">NRTDamage</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Ania Ouiddir.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/nrtdamage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

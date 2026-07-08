@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nrtdamage.materials &#8212; NRTDamage 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for nrtdamage.materials</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">materials.py - Database of materials for NRT damage calculations.</span>
+
+<span class="sd">This module provides displacement energies and neutron cross-sections</span>
+<span class="sd">for common nuclear and aerospace materials.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">MATERIALS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;iron&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;Fe&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;displacement_energy&quot;</span><span class="p">:</span> <span class="mf">40.0</span><span class="p">,</span>
+        <span class="s2">&quot;cross_section&quot;</span><span class="p">:</span> <span class="mf">2.56e-24</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Iron - common structural steel component&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;zirconium&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;Zr&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;displacement_energy&quot;</span><span class="p">:</span> <span class="mf">40.0</span><span class="p">,</span>
+        <span class="s2">&quot;cross_section&quot;</span><span class="p">:</span> <span class="mf">6.46e-24</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Zirconium - used in nuclear fuel cladding&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;tungsten&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;W&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;displacement_energy&quot;</span><span class="p">:</span> <span class="mf">90.0</span><span class="p">,</span>
+        <span class="s2">&quot;cross_section&quot;</span><span class="p">:</span> <span class="mf">2.37e-24</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Tungsten - used in fusion reactor components&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;aluminum&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;Al&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;displacement_energy&quot;</span><span class="p">:</span> <span class="mf">25.0</span><span class="p">,</span>
+        <span class="s2">&quot;cross_section&quot;</span><span class="p">:</span> <span class="mf">1.41e-24</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Aluminum - used in aerospace structures&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;copper&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;Cu&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;displacement_energy&quot;</span><span class="p">:</span> <span class="mf">30.0</span><span class="p">,</span>
+        <span class="s2">&quot;cross_section&quot;</span><span class="p">:</span> <span class="mf">3.78e-24</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Copper - used in electrical components&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;nickel&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;Ni&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;displacement_energy&quot;</span><span class="p">:</span> <span class="mf">40.0</span><span class="p">,</span>
+        <span class="s2">&quot;cross_section&quot;</span><span class="p">:</span> <span class="mf">4.49e-24</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Nickel - used in superalloys for nuclear applications&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;molybdenum&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;Mo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;displacement_energy&quot;</span><span class="p">:</span> <span class="mf">60.0</span><span class="p">,</span>
+        <span class="s2">&quot;cross_section&quot;</span><span class="p">:</span> <span class="mf">2.65e-24</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Molybdenum - used in fusion reactor first wall&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;vanadium&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;symbol&quot;</span><span class="p">:</span> <span class="s2">&quot;V&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;displacement_energy&quot;</span><span class="p">:</span> <span class="mf">40.0</span><span class="p">,</span>
+        <span class="s2">&quot;cross_section&quot;</span><span class="p">:</span> <span class="mf">5.06e-24</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Vanadium - candidate material for fusion reactors&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="get_material">
+<a class="viewcode-back" href="../../nrtdamage.html#nrtdamage.materials.get_material">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_material</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieve material properties by name.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name : str</span>
+<span class="sd">        Name of the material (case-insensitive).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dict</span>
+<span class="sd">        Dictionary containing material properties.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the material is not found in the database.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; mat = get_material(&quot;iron&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; mat[&quot;displacement_energy&quot;]</span>
+<span class="sd">    40.0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">MATERIALS</span><span class="p">:</span>
+        <span class="n">available</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">MATERIALS</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Material &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; not found. &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Available materials: </span><span class="si">{</span><span class="n">available</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">MATERIALS</span><span class="p">[</span><span class="n">name</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="list_materials">
+<a class="viewcode-back" href="../../nrtdamage.html#nrtdamage.materials.list_materials">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">list_materials</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a list of all available material names.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list of str</span>
+<span class="sd">        Sorted list of available material names.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; materials = list_materials()</span>
+<span class="sd">    &gt;&gt;&gt; &quot;iron&quot; in materials</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">MATERIALS</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">NRTDamage</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Ania Ouiddir.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
