@@ -106,3 +106,48 @@ def test_all_displacement_energies_are_positive():
     """
     for name, props in MATERIALS.items():
         assert props["displacement_energy"] > 0
+
+def test_get_material_nickel():
+    """Test that nickel properties are correctly retrieved.
+
+    GIVEN: the material name 'nickel'
+    WHEN: get_material is called
+    THEN: the displacement energy should be 40.0 eV
+    """
+    mat = get_material("nickel")
+    assert mat["displacement_energy"] == pytest.approx(40.0)
+
+
+def test_get_material_molybdenum():
+    """Test that molybdenum properties are correctly retrieved.
+
+    GIVEN: the material name 'molybdenum'
+    WHEN: get_material is called
+    THEN: the displacement energy should be 60.0 eV
+    """
+    mat = get_material("molybdenum")
+    assert mat["displacement_energy"] == pytest.approx(60.0)
+
+
+def test_get_material_vanadium():
+    """Test that vanadium properties are correctly retrieved.
+
+    GIVEN: the material name 'vanadium'
+    WHEN: get_material is called
+    THEN: the displacement energy should be 40.0 eV
+    """
+    mat = get_material("vanadium")
+    assert mat["displacement_energy"] == pytest.approx(40.0)
+
+
+def test_list_materials_contains_all_new_materials():
+    """Test that new materials are in the materials list.
+
+    GIVEN: no input
+    WHEN: list_materials is called
+    THEN: nickel, molybdenum and vanadium should be in the result
+    """
+    materials = list_materials()
+    assert "nickel" in materials
+    assert "molybdenum" in materials
+    assert "vanadium" in materials
