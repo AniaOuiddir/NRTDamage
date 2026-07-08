@@ -32,7 +32,7 @@ def plot_dpa_vs_time(material_name, flux, damage_energy=1000.0,
         If provided, saves the plot to this path. Default is None.
     """
     material = get_material(material_name)
-    times_years = np.linspace(0, max_time_years, 100)
+    times_years = np.linspace(0.01, max_time_years, 100)
     times_seconds = times_years * 3.15e7
 
     dpa_values = [
@@ -77,7 +77,7 @@ def plot_dpa_comparison(flux, damage_energy=1000.0,
     save_path : str or None, optional
         If provided, saves the plot to this path. Default is None.
     """
-    time_seconds = time_years * 3.15e7
+    times_seconds = np.linspace(0.1, max_time_years * 3.15e7, 100)
     materials = list_materials()
     dpa_values = []
 
