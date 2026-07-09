@@ -14,7 +14,7 @@ This phenomenon, known as **radiation damage**, is critical for predicting
 the lifetime of materials in nuclear reactors and space applications.
 
 NRTDamage implements the standard NRT model to estimate the number of
-**displacements per atom (DPA)** — the key metric used by nuclear engineers
+**displacements per atom (DPA)**, the key metric used by nuclear engineers
 worldwide to quantify radiation damage.
 
 ## Example output
