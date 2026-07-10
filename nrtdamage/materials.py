@@ -5,6 +5,8 @@ This module provides displacement energies and neutron cross-sections
 for common nuclear and aerospace materials.
 """
 
+# Displacement energies (Ed) from ASTM E693 standard
+# Cross-sections from ENDF/B-VIII.0 nuclear data library
 MATERIALS = {
     "iron": {
         "symbol": "Fe",
