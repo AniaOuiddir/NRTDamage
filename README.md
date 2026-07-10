@@ -1,6 +1,6 @@
 # NRTDamage
 ![Tests](https://github.com/AniaOuiddir/NRTDamage/actions/workflows/tests.yml/badge.svg)
-[![Documentation](https://img.shields.io/badge/docs-sphinx-blue)](docs/_build/html/index.html)
+![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 
 A Python library and command-line tool to estimate radiation-induced
 atomic displacement damage in nuclear materials using the
