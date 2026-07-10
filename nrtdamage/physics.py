@@ -45,6 +45,7 @@ def nrt_displacements(damage_energy, displacement_energy):
         raise ValueError("displacement_energy must be positive, "
                          f"got {displacement_energy}")
 
+    # 0.8 is the displacement efficiency factor from the NRT standard (ASTM E693)
     return 0.8 * damage_energy / (2.0 * displacement_energy)
 
 
